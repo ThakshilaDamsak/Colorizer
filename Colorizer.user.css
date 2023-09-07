@@ -1,0 +1,221 @@
+/* ==UserStyle==
+@name           Colorizer
+@namespace      thakshiladamsak.github.io
+@version        1.1
+@description    A Custom Theme Maker For thakshiladamsak.github.io
+@author         Thakshila Damsak
+@homepageURL    https://github.com/ThakshilaDamsak/Colorizer
+
+@preprocessor stylus
+
+@var select themeSelect "Theme" {
+ "Theme1": "1",
+ "Theme2": "2",
+ "Theme3": "3",
+ "Custom": "0",
+  }
+
+
+@var text bg-image "Background" "url(../images/background-4.svg)"
+@var checkbox cardsAcrilic "Cards Background Acylic Effect" 1
+@var color header-bg-color "Header Background Color" "rgba(255, 255, 255, 0.795)"
+
+@var number acrylicBlur "Acylic Blur"  ["px",20]
+@var number acrylicSaturation "Acylic acrylicSaturation"  [65]
+
+@var color header-bg-color "Header Background Color" "rgba(255, 255, 255, 0.795)"
+@var color header-links-a-color "Header Menu Color" "rgb(107, 107, 107)"
+@var color header-links-a-hover-color "Header Menu Hover Color" "rgb(0, 0, 0)"
+@var color header-links-a-bg-color "Header Menu Background Color" "rgba(0, 46, 49, 0)"
+@var color header-links-a-hover-bg-color "Header Menu Hover Color" "rgba(68, 68, 68, 0.048)"
+@var checkbox logo-filter "Invert Logo" 0
+@var number logo-opacity "Logo Opacity"  ["%",65]
+
+@var color home-heading-background "Heading Background" "rgb(225, 245, 247)"
+@var color home-name-color "Heading Name" "rgb(6, 143, 197)"
+@var color home-bio-color "Heading Bio" "rgb(122, 181, 236)"
+@var color home-heading-button-color "Heading Button Text" "rgb(218, 238, 255)"
+@var color home-heading-button-color-hover "Heading Button Text Hover" "rgb(255, 255, 255)"
+@var color home-heading-button-background "Heading Button Background" "rgb(39, 173, 226)"
+@var color home-heading-button-background-hover "Heading Button Background" "rgb(0, 119, 255)"
+@var number home-heading-svg-filter "Heading Logo Grayscale" ["%",0]
+@var number home-heading-svg-opacity "Heading Logo Opacity" ["%",35]
+@var color heading-text-shadow "Heading Text Shadow/Glow" "rgba(0, 132, 255, 0.438)"
+@var color home-heading-shadow "Heading Shadow" "rgba(0, 150, 187, 0.192)"
+
+@var color home-about-bg "About Background" "rgb(247, 239, 250)"
+@var color home-about-p-a-color "About Text" "rgb(107, 0, 102)"
+@var color home-about-span-color "About Span" "rgb(185, 0, 176)"
+@var color home-umma-overlay-bg "About Overlay Background" "rgb(255, 223, 255)"
+@var color home-about-text-shadow "About Text Shadow/Glow" "rgba(195, 0, 255, 0.418)"
+@var color home-about-span-shadow "About Span Shadow/Glow" "rgba(0, 0, 0, 0.377)"
+@var color home-about-shadow "About Shadow" "rgba(187, 0, 171, 0.192)"
+
+@var color home-projects-bg "Projects Background" "rgb(202, 253, 223)"
+@var color home-projects-title-bg "Projects Title Background" "rgba(255, 255, 255, 0.63)"
+@var color home-projects-title-p-color "Projects Title Text" "rgb(0, 107, 66)"
+@var color home-projects-project-bg "Project Card Background" "rgba(255, 255, 255, 0.473)"
+@var color home-projects-project-hover-background "Project Card Background Hover" "rgba(255, 255, 255, 0.589)"
+@var color home-projects-logo-img-bg "Projects Logo Image Background" "rgba(255, 255, 255, 0.377)"
+@var color home-projects-project-name-color "Project Name" "rgb(0, 107, 32) "
+@var color home-projects-project-text-color "Project Discription" "rgb(0, 107, 9)"
+@var color projects-text-shadow "Projects Text Shadow/Glow" "rgba(5, 139, 0, 0.555)"
+@var color home-projects-shadow "Heading Shadow" "rgba(0, 187, 93, 0.24)"
+
+@var color footer-bg "Footer Background" "rgba(255, 255, 255, 0.795)"
+@var color footer-a "Footer Text" "rgba(0, 0, 0, 0.747)"
+@var color footer-social-links-i-hover "Footer Social Links Hover" "rgb(0, 0, 0)"
+@var color footer-copyright-p "Footer Copyright Text" "rgba(0, 40, 85, 0.747)"
+@var color footer-site-info-color "Footer Site Info Text" "rgb(88, 88, 88) "
+@var color footer-site-info-color-bg "Footer Site Info Background" "rgb(255, 255, 255)"
+@var color footer-tooltip-footer-color "Tooltip Text" "rgb(102, 102, 102)"
+@var color footer-tooltip-footer-bg "Tooltip Background" "rgb(247, 247, 247)"
+
+@var color bg-bg "Background Overlay" "rgba(243, 243, 243, 0.671)"
+@var checkbox bg-backdrop-filter "Invert Background" 0
+
+@var text home-bg "Home Background" "linear-gradient(to left bottom, rgba(242, 253, 255, 0.6), rgba(238, 248, 255, 0.6))"
+@var color home-a "Home Text" "rgb(0, 0, 0)"
+@var color error-about-p-a-color "Error Page About Text" "rgb(107, 0, 102)"
+
+==/UserStyle== */
+@-moz-document domain("thakshiladamsak.github.io") {
+
+	if(themeSelect)==0 {
+		:root {
+			--root-grayscale: 0%;
+
+			--bg-image: bg-image;
+			--header-bg-color: header-bg-color;
+			--header-a: header-links-a-color;
+			--header-links-a-color: header-links-a-color;
+			--header-links-a-hover-color: header-links-a-hover-color;
+			--header-links-a-bg-color: header-links-a-bg-color;
+			--header-links-a-hover-bg-color: header-links-a-hover-bg-color;
+			--logo-filter: 0%;
+
+			if(logo-filter) {
+				--logo-filter: 100%;
+			}
+
+			--logo-opacity: logo-opacity;
+			--home-heading-background: home-heading-background;
+			--home-name-color: home-name-color;
+			--home-bio-color: home-bio-color;
+			--home-heading-button-color: home-heading-button-color;
+			--home-heading-button-background: home-heading-button-background;
+			--home-heading-button-color-hover: home-heading-button-color-hover;
+			--home-heading-button-background-hover: home-heading-button-background-hover;
+			--home-heading-svg-filter: home-heading-svg-filter;
+			--home-heading-svg-opacity: home-heading-svg-opacity;
+			--heading-text-shadow: heading-text-shadow;
+			--home-about-bg: home-about-bg;
+			--home-about-p-a-color: home-about-p-a-color;
+			--home-about-span-color: home-about-span-color;
+			--home-umma-overlay-bg: home-umma-overlay-bg;
+			--home-about-text-shadow: home-about-text-shadow;
+			--home-about-span-shadow: home-about-span-shadow;
+			--home-projects-bg: home-projects-bg;
+			--home-projects-title-bg: home-projects-title-bg;
+			--home-projects-title-p-color: home-projects-title-p-color;
+			--home-projects-project-bg: home-projects-project-bg;
+			--home-projects-project-hover-background: home-projects-project-hover-background;
+			--home-projects-logo-img-bg: home-projects-logo-img-bg;
+			--home-projects-project-name-color: home-projects-project-name-color;
+			--home-projects-project-text-color: home-projects-project-text-color;
+			--projects-text-shadow: projects-text-shadow;
+			--footer-bg: footer-bg;
+			--footer-a: footer-a;
+			--footer-social-links-i-hover: footer-social-links-i-hover;
+			--footer-copyright-p: footer-copyright-p;
+			--footer-site-info-color: footer-site-info-color;
+			--footer-site-info-color-bg: footer-site-info-color-bg;
+			--footer-tooltip-footer-color: footer-tooltip-footer-color;
+			--footer-tooltip-footer-bg: footer-tooltip-footer-bg;
+			--footer-show-span: footer-site-info-color;
+			--bg-bg: bg-bg;
+			--bg-backdrop-filter: 0%;
+
+			if(bg-backdrop-filter) {
+				--bg-backdrop-filter: 100%;
+			}
+
+			--home-bg: home-bg;
+			--home-a: home-a;
+			--error-about-p-a-color: error-about-p-a-color;
+			--home-heading-shadow: home-heading-shadow;
+			--home-about-shadow: home-about-shadow;
+			--home-projects-shadow: home-projects-shadow;
+		}
+
+
+		if(cardsAcrilic) {
+			.heading,
+			.about,
+			.projects {
+				backdrop-filter: blur(20px) saturate(3);
+			}
+		}
+	}
+
+	if(themeSelect)==1 {
+		:root {
+			--root-grayscale: 0%;
+
+			--bg-image: url(../images/background-4.svg);
+			--header-bg-color: rgba(78, 78, 78, 0.76);
+			--header-a: rgb(185, 185, 185);
+			--header-links-a-color: rgb(185, 185, 185);
+			--header-links-a-hover-color: rgb(255, 255, 255);
+			--header-links-a-hover-bg-color: rgba(212, 212, 212, 0.11);
+			--logo-filter: 100%;
+			--logo-opacity: 70%;
+
+			--home-heading-background: rgb(34, 80, 99);
+			--home-name-color: rgb(89, 189, 255);
+			--home-bio-color: rgb(91, 203, 255);
+			--home-heading-button-color: rgb(35, 83, 105);
+			--home-heading-button-background: rgb(85, 198, 255);
+			--home-heading-button-color-hover: rgb(0, 0, 0);
+			--home-heading-button-background-hover: rgb(46, 171, 255);
+			--home-heading-svg-filter: grayscale(100%);
+			--home-heading-svg-opacity: 20%;
+			--heading-text-shadow: rgba(0, 162, 255, 0.281);
+
+			--home-about-bg: rgb(104, 57, 100);
+			--home-about-p-a-color: rgb(253, 180, 255);
+			--home-about-span-color: rgb(254, 214, 255);
+			--home-umma-overlay-bg: rgb(117, 84, 117);
+			--home-about-span-shadow: var(--home-about-text-shadow);
+
+			--home-projects-bg: rgb(25, 90, 79);
+			--home-projects-title-bg: rgba(35, 173, 132, 0.329);
+			--home-projects-title-p-color: rgb(129, 255, 217);
+			--home-projects-project-bg: rgba(79, 255, 188, 0.171);
+			--home-projects-project-hover-background: rgba(79, 255, 188, 0.253);
+			--home-projects-logo-img-bg: rgba(255, 255, 255, 0.055);
+			--home-projects-project-name-color: rgb(143, 255, 221);
+			--home-projects-project-text-color: rgb(200, 255, 232);
+			--projects-text-shadow: rgba(5, 139, 0, 0.555);
+
+			--footer-bg: rgba(78, 78, 78, 0.76);
+			--footer-a: rgb(185, 185, 185);
+			--footer-social-links-i-hover: rgb(255, 255, 255);
+			--footer-copyright-p: rgb(185, 185, 185);
+			--footer-site-info-color: rgb(194, 194, 194);
+			--footer-site-info-color-bg: rgb(56, 56, 56);
+			--footer-tooltip-footer-color: rgb(212, 212, 212);
+			--footer-tooltip-footer-bg: rgb(68, 68, 68);
+			--footer-show-span: rgb(230, 230, 230);
+
+			--bg-bg: rgba(31, 31, 31, 0.753);
+			--bg-backdrop-filter: 70%;
+
+			--home-bg: linear-gradient(to left bottom, rgb(52, 55, 56), rgb(52, 55, 56));
+			--home-a: rgb(163, 175, 177);
+			--error-about-p-a-color: rgb(253, 180, 255);
+
+			--human-ambient-opacity: 70%;
+		}
+	}
+}

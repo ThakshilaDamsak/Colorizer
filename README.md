@@ -11,7 +11,7 @@ Custom color theme/contrast tester for Thakhsiladamsak.github.io
 
 #
 
- <a href="https://raw.githubusercontent.com/ThakshilaDamsak/Colorizer/main/Colorizer.user.css">
+ <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/">
     <img alt="Install directly with Stylus" src="https://img.shields.io/badge/Get%20Stylus%20for-Firefox-e68a00.svg"/>
   </a>
  <a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne">

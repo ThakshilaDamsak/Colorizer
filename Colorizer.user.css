@@ -82,7 +82,13 @@
 @-moz-document domain("thakshiladamsak.github.io") {
 
 	if(themeSelect)==0 {
-		:root.custom {
+		:root,
+		:root.light,
+		:root.dark,
+		:root.aqua,
+		:root.frost,
+		:root.charcoal,
+		:root.cyberthenuk {
 			--root-grayscale: 0%;
 
 			--bg-image: bg-image;
